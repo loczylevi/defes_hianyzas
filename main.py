@@ -25,6 +25,8 @@ with open("szeptember.csv","r",encoding="ISO8859-2") as f:
   fejlec = f.readline()
   lista = [Hianyzasok(sor) for sor in f]
 #2
+for sor in lista:
+  pirnt(sor)
 def osszes_hianyzo(lista):
   for sor in lista:
     f = len(sor.mulasztott)
@@ -66,4 +68,4 @@ def stat(lista):
     for kulcs,ertek in sorted(stat.items()):
       tarolo = tarolo + str(kulcs) + str(ertek) + "\n"
     fw.write(tarolo)
-  s = stat(lista)
+s = stat(lista)
