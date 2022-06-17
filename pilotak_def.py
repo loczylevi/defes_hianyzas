@@ -74,3 +74,12 @@ tobb_rajtszam_azonos_pilota = [ print(f'{rajtszam} - {db} db.',end="") for rajts
 print(f'7. feladat: {tobb_rajtszam_azonos_pilota} ')
 
 """
+
+#7.feladat
+rajtszam2 = [int(sor.rajtszam) for sor in lista if sor.rajtszam != ""]
+statisztika = dict()
+print("7.feladat: ",end="")
+for sor in rajtszam2:
+    rajtszam = sor
+    statisztika[rajtszam] = statisztika.get(rajtszam, 0) + 1
+y = [print(f' {rajtszam},',end="") for rajtszam, db in statisztika.items() if db > 1]
